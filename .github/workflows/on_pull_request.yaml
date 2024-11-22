@@ -15,10 +15,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.11
-          # NB: there's no cache: pip here since we're not installing anything
-          #     from the requirements.txt file(s) in the repository; it's faster
-          #     not to have GHA download an (at the time of writing) 4 GB cache
-          #     of PyTorch and other dependencies.
       - name: Install Ruff
         run: pip install ruff==0.3.3
       - name: Run Ruff
