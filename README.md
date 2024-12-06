@@ -1,22 +1,22 @@
 # Stable Diffusion web UI
-A web interface for Stable Diffusion, implemented using Gradio library.
+Gradio ライブラリを使用して実装された Stable Diffusion の Web インターフェイス。
 
 ![](screenshot.png)
 
 ## Features
-[Detailed feature showcase with images](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features):
-- Original txt2img and img2img modes
-- One click install and run script (but you still must install python and git)
-- Outpainting
-- Inpainting
-- Color Sketch
-- Prompt Matrix
-- Stable Diffusion Upscale
-- Attention, specify parts of text that the model should pay more attention to
-    - a man in a `((tuxedo))` - will pay more attention to tuxedo
-    - a man in a `(tuxedo:1.21)` - alternative syntax
-    - select text and press `Ctrl+Up` or `Ctrl+Down` (or `Command+Up` or `Command+Down` if you're on a MacOS) to automatically adjust attention to selected text (code contributed by anonymous user)
-- Loopback, run img2img processing multiple times
+[画像付きの詳細な機能紹介(英語)](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features):
+- オリジナルのtxt2imgおよびimg2imgモード
+- ワンクリックでインストールしてスクリプトを実行(PythonやGitもスクリプト内でインストール)
+- アウトペインティング
+- 修復
+- カラースケッチ
+- プロンプトマトリックス
+- Stable Diffusion アップスケール
+- モデルが特に注意を払うべきテキストの部分を指定します。
+    - a man in a `((tuxedo))` - tuxedoにもっと注目する
+    - a man in a `(tuxedo:1.21)` - 代替構文
+    - テキストを選択し、`Ctrl+Up` または `Ctrl+Down` (MacOS の場合は `Command+Up` または `Command+Down`) を押すと、選択したテキストへの注目が自動的に調整されます。 (コードは匿名ユーザーによって提供されました。)
+- ループバック、img2img処理を複数回実行
 - X/Y/Z plot, a way to draw a 3 dimensional plot of images with different parameters
 - Textual Inversion
     - have as many embeddings as you want and use any names you like for them
