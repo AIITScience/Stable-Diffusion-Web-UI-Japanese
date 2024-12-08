@@ -1,0 +1,1 @@
+Stable Diffusionは、stable-diffusion-webui-extensionsというリポジトリのindex.jsonにアクセスして拡張機能の情報を取得するので、手動で置く必要はありません。
