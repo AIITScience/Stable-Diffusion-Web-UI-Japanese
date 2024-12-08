@@ -1,0 +1,1 @@
+セットアップ時にhttps://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensorsをダウンロードするので、手動で置く必要はありません。
