@@ -1,12 +1,13 @@
 cd %~dp0%
 set VENV_DIR=%~dp0%venv
-title Stable Diffusion Web UI Japanese - Gitの確認
-git version
+title Stable Diffusion Web UI Japanese - GitとGitconfigの確認
+git config safe.directory
 if %ERRORLEVEL% == 9009 (
 echo Gitがインストールされていません。インストールしています。
 winget install --id Git.Git -e --source winget
 goto :show_stdout_stderr
 )
+if %ERRORLEVEL% == 1 git config safe.directory *
 set "GIT_PYTHON_GIT_EXECUTABLE=%GIT%"
 
 title Stable Diffusion Web UI Japanese - pythonの確認
@@ -64,7 +65,9 @@ if EXIST %ACCELERATE% goto :accelerate_launch
 
 :launch
 title Stable Diffusion Web UI Japanese - 起動
+start https://translate.google.com/
 echo ※"No module named 'モジュール名'"と表示されたら、再起動すると直る可能性があります。
+echo ※英語入力が必要となってくるので翻訳ソフトを開きました。
 %PYTHON% launch.py %*
 if EXIST tmp/restart goto :skip_venv
 pause
