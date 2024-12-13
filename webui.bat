@@ -7,7 +7,7 @@ echo Gitがインストールされていません。インストールしてい
 winget install --id Git.Git -e --source winget
 goto :show_stdout_stderr
 )
-if %ERRORLEVEL% == 1 git config safe.directory *
+if %ERRORLEVEL% == 1 git config --global safe.directory *
 set "GIT_PYTHON_GIT_EXECUTABLE=%GIT%"
 
 title Stable Diffusion Web UI Japanese - pythonの確認
