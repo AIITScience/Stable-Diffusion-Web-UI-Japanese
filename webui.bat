@@ -81,6 +81,7 @@ pause
 exit /b
 
 :show_stdout_stderr
+title Stable Diffusion Web UI Japanese - 標準出力の表示
 echo.
 echo 終了コード:%ERRORLEVEL%
 for /f %%i in ("tmp\stdout.txt") do set size=%%~zi
@@ -90,6 +91,7 @@ echo 標準出力:
 type tmp\stdout.txt
 
 :show_stderr
+title Stable Diffusion Web UI Japanese - 標準エラー出力の表示
 for /f %%i in ("tmp\stderr.txt") do set size=%%~zi
 if %size% equ 0 goto :show_stderr
 echo.
