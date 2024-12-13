@@ -65,7 +65,8 @@ if EXIST %ACCELERATE% goto :accelerate_launch
 
 :launch
 title Stable Diffusion Web UI Japanese - 起動
-start https://translate.google.com/
+0install run deepl
+if not %ERRORLEVEL% == 0 start https://www.deepl.com/ja/translator
 echo ※英語入力が必要となってくるので翻訳ソフトを開きました。
 echo ※"No module named 'モジュール名'"と表示されたら、再起動すると直る可能性があります。
 %PYTHON% launch.py %*
